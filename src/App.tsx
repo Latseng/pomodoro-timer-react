@@ -6,7 +6,7 @@ import { ModeToggle } from "./components/mode-toggle";
 import SettingsContext from "./components/SettingsContext";
 
 function App() {
-  const [isSettingsOpen, setIsSettingsOpen] = useState(true);
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [workMinutes, setWorkMinutes] = useState(35);
   const [breakMinutes, setBreakMinutes] = useState(10);
   return (
@@ -21,6 +21,7 @@ function App() {
           breakMinutes,
           setWorkMinutes,
           setBreakMinutes,
+          setIsSettingsOpen
         }}>
           {isSettingsOpen ? <TimerSettings /> : <Timer />}
         </SettingsContext.Provider>

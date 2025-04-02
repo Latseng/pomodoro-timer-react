@@ -1,6 +1,8 @@
 import { Slider } from "@/components/ui/slider";
 import { useContext } from "react";
 import SettingsContext from "./SettingsContext";
+import { Button } from "./ui/button";
+import { CircleArrowLeft } from "lucide-react";
 
 const TimerSettings = () => {
   const settingData = useContext(SettingsContext)
@@ -34,6 +36,10 @@ const TimerSettings = () => {
           />
         </div>
       </div>
+      <Button className="cursor-pointer" onClick={() => settingData.setIsSettingsOpen(false)}>
+        <CircleArrowLeft />
+        Back
+      </Button>
     </div>
   );
 };
