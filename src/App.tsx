@@ -9,20 +9,23 @@ function App() {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [workMinutes, setWorkMinutes] = useState(35);
   const [breakMinutes, setBreakMinutes] = useState(10);
+  
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <main>
         <ModeToggle />
-        <h1 className="my-12 md:my-8 text-4xl font-bold text-center">
-          pomodoro-timer
+        <h1 className="my-8 text-4xl font-bold text-center">
+          🍅蕃茄鐘
         </h1>
-        <SettingsContext.Provider value={{
-          workMinutes,
-          breakMinutes,
-          setWorkMinutes,
-          setBreakMinutes,
-          setIsSettingsOpen
-        }}>
+        <SettingsContext.Provider
+          value={{
+            workMinutes,
+            breakMinutes,
+            setWorkMinutes,
+            setBreakMinutes,
+            setIsSettingsOpen,
+          }}
+        >
           {isSettingsOpen ? <TimerSettings /> : <Timer />}
         </SettingsContext.Provider>
       </main>
@@ -30,4 +33,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
