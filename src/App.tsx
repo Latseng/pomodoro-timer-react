@@ -2,7 +2,6 @@ import { useState } from "react";
 import Timer from "./components/Timer";
 import TimerSettings from "./components/TimerSettings";
 import { ThemeProvider } from "@/components/theme-provider";
-import { ModeToggle } from "./components/mode-toggle";
 import SettingsContext from "./components/SettingsContext";
 
 function App() {
@@ -13,7 +12,6 @@ function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <main>
-        <ModeToggle />
         <h1 className="my-8 text-4xl font-bold text-center">
           🍅蕃茄鐘
         </h1>

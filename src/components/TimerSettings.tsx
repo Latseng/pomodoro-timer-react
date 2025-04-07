@@ -3,6 +3,7 @@ import { useContext } from "react";
 import SettingsContext from "./SettingsContext";
 import { Button } from "./ui/button";
 import { CircleArrowLeft } from "lucide-react";
+import { ModeToggle } from "./mode-toggle";
 
 const TimerSettings = () => {
   const settingData = useContext(SettingsContext)
@@ -11,6 +12,7 @@ const TimerSettings = () => {
     <div className="my-8 flex flex-col items-center">
       <h2 className="text-3xl font-semibold">時間設定</h2>
       <div className="py-8 px-12 md:w-1/2 flex flex-col gap-4">
+        <ModeToggle />
         <div>
           <h4 className="text-lg my-2">專注 {settingData.workMinutes}:00</h4>
           <Slider
